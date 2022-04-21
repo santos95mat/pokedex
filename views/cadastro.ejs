@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div>
+                <a href="/">
+                    <h1>
+                        P<img src="img/logo.png" alt="">kedex
+                    </h1>
+                </a>
+            </div>
+
+            <nav class="desktop">
+                <a href="/">Home</a>
+                <a href="/cadastro" style="color: black;">Cadastro</a>
+            </nav>
+
+            <nav class="mobile">
+                <img id="mobileImg" src="img/menu.png" alt="">
+                <ul id="mobileUl">
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/cadastro">
+                        <li>Cadastro</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <h2 class="h2cad">Cadastro pokemon</h2>
+
+        <div id="main">
+            <section id="cadastroimg">
+                <img src="img/pokedex.png" alt="">
+            </section>
+            
+            <section id="cadastro">
+                <form action="/add" method="post">
+                    <label for="id">Numero(ID):</label>
+                    <input required type="number" id="id" name="id">
+
+                    <label for="nome">Nome:</label>
+                    <input required type="text" id="nome" name="nome">
+
+                    <label for="tipo">Tipo:</label>
+                    <select required name="tipo" id="type">
+                        <option value=""></option>
+                        <option value="Bug">Bug</option>
+                        <option value="Dragao">Dragao</option>
+                        <option value="Fada">Fada</option>
+                        <option value="Fogo">Fogo</option>
+                        <option value="Ghost">Ghost</option>
+                        <option value="Ground">Ground</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Psíquico">Psíquico</option>
+                        <option value="Steel">Steel</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Eletric">Eletric</option>
+                        <option value="Luta">Luta</option>
+                        <option value="flying">Flying</option>
+                        <option value="Planta">Planta</option>
+                        <option value="Ice">Ice</option>
+                        <option value="Poison">Poison</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Agua">Agua</option>
+                    </select>
+
+                    <label for="imagem">Link da imagem:</label>
+                    <input required type="text" name="imagem" id="imagem">
+
+                    <label for="descricao">Descrição:</label>
+                    <input required type="text" id="descricao" name="descricao">
+
+                    <label for="altura">Altura(cm):</label>
+                    <input required type="number" id="altura" name="altura">
+
+                    <label for="peso">Peso(kg):</label>
+                    <input required type="text" id="peso" name="peso">
+
+                    <label for="categoria">Categoria:</label>
+                    <input required type="text" id="categoria" name="categoria">
+
+                    <label for="habilidade">Habilidade:</label>
+                    <input required type="text" id="habilidade" name="habilidade">
+
+                    <button id="btn" type="submit">Cadastrar</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

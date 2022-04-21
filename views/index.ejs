@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div>
+                <a href="/">
+                    <h1>
+                        P<img src="img/logo.png" alt="">kedex
+                    </h1>
+                </a>
+            </div>
+
+            <nav class="desktop">
+                <a href="/" style="color: black;">Home</a>
+                <a href="/cadastro">Cadastro</a>
+            </nav>
+
+            <nav class="mobile">
+                <img id="mobileImg" src="img/menu.png" alt="">
+                <ul id="mobileUl">
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/cadastro">
+                        <li>Cadastro</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        
+        <div id="pokedados">
+            <h2>Pokemons</h2>
+            <input type="text">
+            <button type="submit">
+                <img src="img/search.png" alt="">
+            </button>
+        </div>
+
+        <section id="cards">
+        <% pokedex.forEach((pokemon) => { %>
+            <a href="/<%=pokemon.nome%>">
+                <div class="card">
+                    <h2><%= pokemon.nome %></h2>
+                    <img src="<%= pokemon.imagem %>" alt="">
+                </div>
+            </a>
+        <% }) %>                
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

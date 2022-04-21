@@ -1,0 +1,26 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Projeto MVC de uma pokedex",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js -e js,html,css,ejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santos95mat/pokedex.git"
+  },
+  "author": "Matheus Rodrigues Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santos95mat/pokedex/issues"
+  },
+  "homepage": "https://github.com/santos95mat/pokedex#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
