@@ -18,7 +18,7 @@ input::-webkit-inner-spin-button {
 header {
     width: 100%;
     position: relative;
-    min-height: 10vh;
+    min-height: 15vh;
 }
 
 a {
@@ -94,7 +94,8 @@ main {
     align-content: center;
     text-align: center;
     width: 100%;
-    min-height: 80vh;
+    min-height: 79vh;
+    margin-bottom: 1vh;
 }
 
 #pokedados {
@@ -104,7 +105,6 @@ main {
     align-items: center;
     flex-wrap: wrap;
     width: 50vh;
-    margin-top: 2.5rem;
     gap: 1rem;
 }
 
@@ -163,6 +163,10 @@ main {
     cursor: pointer;
 }
 
+#cards div.card:hover {
+    background-color: rgb(228, 246, 252);
+}
+
 #cards div.card img {
     width: 100%;
     margin-top: 2rem;
@@ -183,10 +187,6 @@ main {
     text-align: center;
     width: 100%;
     min-height: 80vh;
-}
-
-.h2cad {
-    margin-top: 2rem;
 }
 
 #cadastroimg {
@@ -263,6 +263,86 @@ main {
     background-color: red;
 }
 
+#detalhe {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 70%;
+    min-width: 350px;
+    gap: 2rem;
+}
+
+#detalhe article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    min-height: 50vh;
+    text-align: left;
+}
+
+#detalhe-img {
+    justify-content: flex-end;
+}
+
+#detalhe-img img {
+    width: 70%;
+    min-width: 350px;
+    align-items: flex-end;
+    background-color: rgb(224, 224, 224);
+    border-radius: 10px;
+}
+
+#detalhe-txt {
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#detalhe-txt p {
+    width: 75%;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#detalhe-txt #status {
+    width: 68%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 50%;
+    background-color: rgb(119, 210, 252);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#detalhe-txt #status h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#detalhe-txt #status h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: black;
+    color: #fff;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
 @media screen and (max-width: 920px) {
     #header .mobile {
         display: block;
@@ -317,5 +397,32 @@ main {
 
     #cadastroimg {
         display: none;
+    }
+
+    #detalhe {
+        flex-direction: column;
+    }
+
+    #detalhe article {
+        width: 90%;
+    }
+
+    #detalhe-img {
+        justify-content: center;
+    }
+
+    #detalhe-txt {
+        align-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    #detalhe-txt #status {
+        width: 90%;
+    }
+
+    #detalhe-txt p {
+        margin-bottom: 0;
     }
 }

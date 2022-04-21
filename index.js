@@ -3,6 +3,7 @@ import path from "path";
 
 const app = express();
 const __dirname = path.resolve(path.dirname(''));
+const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -12,31 +13,58 @@ const pokedex = [
   {
     id: 1,
     nome: "Bulbasaur",
-    descricao: "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
     tipo: "Tipo: Grass",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    descricao: "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
+    altura: 70,
+    peso: 6.9,
+    categoria: "Seed",
+    habilidade: "Overgrow",
   },
   {
     id: 2,
     nome: "Charmander",
-    descricao: "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
     tipo: "Tipo: Fire",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+    descricao: "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+    altura: 60,
+    peso: 8.5,
+    categoria: "Lizard",
+    habilidade: "Blaze",
   },
   {
     id: 3,
     nome: "Squirtle",
-    descricao: "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
     tipo: "Tipo: Water",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+    descricao: "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
+    altura: 50,
+    peso: 9,
+    categoria: "Tiny Turtle",
+    habilidade: "Torrent",
   },  
   {
     id: 4,
-    nome: "Pikachu",
-    descricao: "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
-    tipo: "Tipo: Electric",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
-  },   
+    nome: "Pichu",
+    tipo: "Tipo: Eletric",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/172.png",
+    descricao: "Despite its small size, it can zap even adult humans. However, if it does so, it also surprises itself.",
+    altura: 30,
+    peso: 2,
+    categoria: "Tiny Mouse",
+    habilidade: "Static",
+  },
+  {
+    id: 5,
+    nome: "Eevee",
+    tipo: "Tipo: Normal",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png",
+    descricao: "It has the ability to alter the composition of its body to suit its surrounding environment.",
+    altura: 30,
+    peso: 6.5,
+    categoria: "Evolution",
+    habilidade: "Run Away",
+  }, 
 ]
 
 app.get("/", (req, res) => {
@@ -56,10 +84,20 @@ app.get("/:nome", (req, res) => {
 
 app.post("/add", (req, res) => {
   const pokemon = req.body;
+  let index = false;
 
-  pokedex.push(pokemon);
+  for(let poke of pokedex){
+    if(poke.nome.toLowerCase() === pokemon.nome.toLowerCase()){
+      index = true;
+      break;
+    }
+  }
+
+  if(index === false) {
+    pokedex.push(pokemon);
+  }
 
   res.redirect("/");
 });
 
-app.listen(3000);
+app.listen(PORT, () => console.log(`Server in http://localhost:${PORT}`));

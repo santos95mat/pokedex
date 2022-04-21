@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Pokedex</title>
+    <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
 </head>
 <body>
     <header>
@@ -36,6 +37,47 @@
             </nav>
         </div>
     </header>
+
+    <main>
+        <h2><%=pokemon.nome%> Nº<%=pokemon.id%></h2>
+
+        <section id="detalhe">
+            <article id="detalhe-img">
+                <img src="<%=pokemon.imagem%>" alt="">
+            </article>
+
+            <article id="detalhe-txt">
+                <p><%=pokemon.descricao%></p>
+
+                <div id="status">
+                    <div>
+                        <h3>Altura</h3>
+                        <h4><%=pokemon.altura%>cm</h4>
+
+                        <h3>Peso</h3>
+                        <h4><%=pokemon.peso%>kg</h4>  
+                    </div>
+
+                    <div>
+                        <h3>Categoria</h3>
+                        <h4><%=pokemon.categoria%></h4>
+
+                        <h3>Habilidade</h3>
+                        <h4><%=pokemon.habilidade%></h4>
+                    </div>                   
+                </div>
+
+                <p><%=pokemon.tipo%></p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Todos os direitos reservados a <a href="http://www.github.com/santos95mat" target="_blank">Matheus Rodrigues</a></p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
