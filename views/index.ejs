@@ -50,7 +50,7 @@
 
         <section id="cards">
         <% pokedex.forEach((pokemon) => { %>
-            <a href="/detalhe/<%=pokemon.nome%>">
+            <a href="/<%=pokemon.nome%>">
                 <div class="card">
                     <h2><%= pokemon.nome %></h2>
                     <img src="<%= pokemon.imagem %>" alt="">
