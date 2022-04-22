@@ -75,7 +75,7 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
 
-app.get("/:nome", (req, res) => {
+app.get("/detalhe/:nome", (req, res) => {
   const nome = req.params.nome;
   const pokemon = pokedex.find(pokemon => pokemon.nome === nome);
 
@@ -94,6 +94,7 @@ app.post("/add", (req, res) => {
   }
 
   if(index === false) {
+    pokemon.id = pokedex.length + 1;
     pokedex.push(pokemon);
   }
 

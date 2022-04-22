@@ -94,8 +94,7 @@ main {
     align-content: center;
     text-align: center;
     width: 100%;
-    min-height: 79vh;
-    margin-bottom: 1vh;
+    min-height: 80vh;
 }
 
 #pokedados {
@@ -148,6 +147,7 @@ main {
 
 #cards {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 98%;
     display: flex;
     flex-wrap: wrap;
@@ -157,8 +157,8 @@ main {
 
 #cards div.card {
     padding: 1rem;
-    width: 15vh;
-    height: 20vh;
+    width: 18vh;
+    height: 25vh;
     box-shadow: 5px 5px 5px 5px #00000020;
     cursor: pointer;
 }
@@ -180,6 +180,10 @@ main {
     text-align: center;
 }
 
+#cards div.card p {
+    text-align: left;
+}
+
 #main {
     display: flex;
     justify-content: center;
@@ -187,7 +191,7 @@ main {
     align-content: center;
     text-align: center;
     width: 100%;
-    min-height: 80vh;
+    height: 75vh;
 }
 
 #cadastroimg {
@@ -273,6 +277,7 @@ main {
     width: 70%;
     min-width: 350px;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 #detalhe article {
@@ -303,6 +308,7 @@ main {
 
 #detalhe-txt p {
     width: 75%;
+    min-width: 350px;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -317,6 +323,7 @@ main {
     background-color: rgb(119, 210, 252);
     padding: 1rem;
     border-radius: 10px;
+    min-width: 340px;
 }
 
 #detalhe-txt #status h3 {
@@ -413,6 +420,7 @@ footer {
     }
 
     #detalhe-txt {
+        justify-content: center;
         align-content: space-between;
         align-items: center;
         text-align: center;
