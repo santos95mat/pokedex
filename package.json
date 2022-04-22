@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Projeto MVC de uma pokedex",
   "main": "index.js",
+  "engines": {
+	  "node": "14.x"
+	},
   "type":"module",
   "scripts": {
     "start": "node index.js",
@@ -20,7 +23,9 @@
   "homepage": "https://github.com/santos95mat/pokedex#readme",
   "dependencies": {
     "ejs": "^3.0.2",
-    "express": "^4.17.3",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }
