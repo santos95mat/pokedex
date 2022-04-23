@@ -6,6 +6,15 @@
     font-family: Roboto, Arial;
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 input[type=number]::-webkit-inner-spin-button { 
     all: unset; 
     min-width: 21px;
