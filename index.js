@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
-let pesquisa = "";
+let pesquisa = [];
 
 const pokedex = [
   {
@@ -70,17 +70,17 @@ const pokedex = [
 ]
 
 app.get("/", (req, res) => {
-  pesquisa = "";
+  pesquisa = [];
   res.render("index", {pokedex, pesquisa});
 });
 
 app.get("/cadastro", (req, res) => {
-  pesquisa = "";
+  pesquisa = [];
   res.render("cadastro");
 });
 
 app.get("/:nome", (req, res) => {
-  pesquisa = "";
+  pesquisa = [];
   const nome = req.params.nome;
   const pokemon = pokedex.find(pokemon => pokemon.nome === nome);
 
@@ -108,20 +108,20 @@ app.post("/add", (req, res) => {
 });
 
 app.post("/search", (req, res) => {
-  pesquisa = req.body;
+  const search = req.body;
   let index = false;
 
-  if(pesquisa.nome !== ""){
+  if(search.nome !== ""){
     for(let poke of pokedex) {
-      if(poke.nome.toLowerCase().includes(pesquisa.nome.toLowerCase())){
-        pesquisa = poke;
+      if(poke.nome.toLowerCase().includes(search.nome.toLowerCase())){
+        pesquisa.push(poke);
         index = true;
       }
     }
   } 
 
   if (index == false) {
-    pesquisa = "";
+    pesquisa = [];
   } 
 
   res.render("index", {pokedex, pesquisa});

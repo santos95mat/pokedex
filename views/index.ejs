@@ -49,7 +49,7 @@
         </form>
 
         <section id="cards">
-        <% if(pesquisa === "") {pokedex.forEach((pokemon) => { %>
+        <% if(pesquisa.length === 0) {pokedex.forEach((pokemon) => { %>
             <a href="/<%=pokemon.nome%>">
                 <div class="card">
                     <h2><%= pokemon.nome %></h2>
@@ -57,15 +57,15 @@
                     <p><%= pokemon.tipo %></p>
                 </div>
             </a>
-        <% })}else { %>
-            <a href="/<%=pesquisa.nome%>">
+        <% })}else {pesquisa.forEach((pokemon) => { %>
+            <a href="/<%=pokemon.nome%>">
                 <div class="card">
-                    <h2><%= pesquisa.nome %></h2>
-                    <img src="<%= pesquisa.imagem %>" alt="">
-                    <p><%= pesquisa.tipo %></p>
+                    <h2><%= pokemon.nome %></h2>
+                    <img src="<%= pokemon.imagem %>" alt="">
+                    <p><%= pokemon.tipo %></p>
                 </div>
             </a> 
-        <% }%>              
+        <% })} %>              
         </section>
     </main>
 
