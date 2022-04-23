@@ -1,4 +1,4 @@
-# BlueM2P2 - Pokedex
+# Blue M2P2 - Pokedex
 #### Inspired by the "Pokedex" from "Pokemon"
 #### ExpressJS application for data persistence.
 
