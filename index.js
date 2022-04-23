@@ -108,6 +108,7 @@ app.post("/add", (req, res) => {
 });
 
 app.post("/search", (req, res) => {
+  pesquisa = [];
   const search = req.body;
   let index = false;
 
