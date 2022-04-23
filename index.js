@@ -70,6 +70,7 @@ const pokedex = [
 ]
 
 app.get("/", (req, res) => {
+  pesquisa = "";
   res.render("index", {pokedex, pesquisa});
 });
 
@@ -111,7 +112,7 @@ app.post("/search", (req, res) => {
   let index = false;
 
   for(let poke of pokedex) {
-    if(poke.nome.toLowerCase() === pesquisa.nome.toLowerCase()){
+    if(poke.nome.toLowerCase().includes(pesquisa.nome.toLowerCase())){
       pesquisa = poke;
       index = true;
     }
