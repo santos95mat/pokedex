@@ -311,6 +311,7 @@ main {
     min-width: 350px;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 #detalhe-txt #status {
