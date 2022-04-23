@@ -9,6 +9,8 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
+let pesquisa = "";
+
 const pokedex = [
   {
     id: 1,
@@ -68,18 +70,21 @@ const pokedex = [
 ]
 
 app.get("/", (req, res) => {
-  res.render("index", {pokedex});
+  res.render("index", {pokedex, pesquisa});
 });
 
 app.get("/cadastro", (req, res) => {
+  pesquisa = "";
   res.render("cadastro");
 });
 
 app.get("/:nome", (req, res) => {
+  pesquisa = "";
   const nome = req.params.nome;
   const pokemon = pokedex.find(pokemon => pokemon.nome === nome);
 
   res.render("detalhe", {pokemon});
+
 });
 
 app.post("/add", (req, res) => {
@@ -99,6 +104,24 @@ app.post("/add", (req, res) => {
   }
 
   res.redirect("/");
+});
+
+app.post("/search", (req, res) => {
+  pesquisa = req.body;
+  let index = false;
+
+  for(let poke of pokedex) {
+    if(poke.nome.toLowerCase() === pesquisa.nome.toLowerCase()){
+      pesquisa = poke;
+      index = true;
+    }
+  }
+
+  if (index == false) {
+    pesquisa = "";
+  } 
+
+  res.render("index", {pokedex, pesquisa});
 });
 
 app.listen(PORT, () => console.log(`Server in http://localhost:${PORT}`));

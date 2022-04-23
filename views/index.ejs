@@ -40,16 +40,16 @@
     
     <main>
         
-        <div id="pokedados">
+        <form action="/search" method="post" id="pokedados">
             <h2>Pokemons</h2>
-            <input type="text">
+            <input type="text" id="nome" name="nome">
             <button type="submit">
                 <img src="/img/search.png" alt="">
-            </button>
-        </div>
+            </button>          
+        </form>
 
         <section id="cards">
-        <% pokedex.forEach((pokemon) => { %>
+        <% if(pesquisa === "") {pokedex.forEach((pokemon) => { %>
             <a href="/<%=pokemon.nome%>">
                 <div class="card">
                     <h2><%= pokemon.nome %></h2>
@@ -57,7 +57,15 @@
                     <p><%= pokemon.tipo %></p>
                 </div>
             </a>
-        <% }) %>                
+        <% })}else { %>
+            <a href="/<%=pesquisa.nome%>">
+                <div class="card">
+                    <h2><%= pesquisa.nome %></h2>
+                    <img src="<%= pesquisa.imagem %>" alt="">
+                    <p><%= pesquisa.tipo %></p>
+                </div>
+            </a> 
+        <% }%>              
         </section>
     </main>
 
