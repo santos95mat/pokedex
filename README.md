@@ -1,5 +1,6 @@
 # Módulo 2 / Projeto 2 (Pokedex)
-#### Este projeto consiste na criação de uma pokedex baseado na pokedex do site oficial do pokemon
+#### Inspired by the "Pokedex" from "Pokemon"
+#### ExpressJS application for data persistence.
 
 ## Ferramenta utilizadas
 
