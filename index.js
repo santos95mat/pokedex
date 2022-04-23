@@ -242,7 +242,7 @@ class Pokemon {
     this.imagem = c,
     this.descricao = d,
     this.altura = e,
-    this.pesos = f,
+    this.peso = f,
     this.categoria = g,
     this.habilidade = h
   }
