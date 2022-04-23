@@ -234,6 +234,20 @@ const pokedex = [
   },
 ]
 
+class Pokemon {
+  constructor(a, b, c , d, e, f, g, h){
+    this.id = pokedex.length + 1,
+    this.nome = a,
+    this.tipo = b,
+    this.imagem = c,
+    this.descricao = d,
+    this.altura = e,
+    this.pesos = f,
+    this.categoria = g,
+    this.habilidade = h
+  }
+}
+
 app.get("/", (req, res) => {
   pesquisa = [];
   res.render("index", {pokedex, pesquisa});
@@ -254,7 +268,8 @@ app.get("/:nome", (req, res) => {
 });
 
 app.post("/add", (req, res) => {
-  const pokemon = req.body;
+  const {nome, tipo, imagem, descricao, altura, peso, categoria, habilidade} = req.body;
+  const pokemon = new Pokemon(nome, tipo, imagem, descricao, altura, peso, categoria, habilidade);
   let index = false;
 
   for(let poke of pokedex){
@@ -267,7 +282,6 @@ app.post("/add", (req, res) => {
   if(index === false) {
     const nome = pokemon.nome[0].toUpperCase() + pokemon.nome.substr(1).toLowerCase();
     pokemon.nome = nome;
-    pokemon.id = pokedex.length + 1;
     pokedex.push(pokemon);
   }
 
