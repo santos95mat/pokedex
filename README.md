@@ -28,7 +28,7 @@
     <img src="https://assets.pokemon.com/assets/cms2-pt-br/img/misc/gus/buttons/logo-pokemon-79x45.png"/>
 </a>
 
-## Contato
+## Contact
 
 <a href="https://www.linkedin.com/in/msantos95/" target="blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
