@@ -40,63 +40,65 @@
 
     <main>
 
-        <h2>Cadastro pokemon</h2>
+        <div class="cadastro">
+            <h2>Cadastro pokemon</h2>
 
-        <div id="main">
-            <section id="cadastroimg">
-                <img src="/img/pokedex.png" alt="">
-            </section>
-            
-            <section id="cadastro">
-                <form action="/add" method="post">
+            <div id="main">
+                <section id="cadastroimg">
+                    <img src="/img/pokedex.png" alt="">
+                </section>
+                
+                <section id="cadastro">
+                    <form action="/add" method="post">
 
-                    <label for="nome">Nome:</label>
-                    <input required maxlength="15" type="text" id="nome" name="nome">
+                        <label for="nome">Nome:</label>
+                        <input required maxlength="15" type="text" id="nome" name="nome">
 
-                    <label for="tipo">Tipo:</label>
-                    <select required name="tipo" id="tipo">
-                        <option value=""></option>
-                        <option value="Tipo: Bug">Bug</option>
-                        <option value="Tipo: Dragao">Dragao</option>
-                        <option value="Tipo: Fada">Fada</option>
-                        <option value="Tipo: Fogo">Fogo</option>
-                        <option value="Tipo: Ghost">Ghost</option>
-                        <option value="Tipo: Ground">Ground</option>
-                        <option value="Tipo: Normal">Normal</option>
-                        <option value="Tipo: Psíquico">Psíquico</option>
-                        <option value="Tipo: Steel">Steel</option>
-                        <option value="Tipo: Dark">Dark</option>
-                        <option value="Tipo: Eletric">Eletric</option>
-                        <option value="Tipo: Luta">Luta</option>
-                        <option value="Tipo: flying">Flying</option>
-                        <option value="Tipo: Planta">Planta</option>
-                        <option value="Tipo: Ice">Ice</option>
-                        <option value="Tipo: Poison">Poison</option>
-                        <option value="Tipo: Rock">Rock</option>
-                        <option value="Tipo: Agua">Agua</option>
-                    </select>
+                        <label for="tipo">Tipo:</label>
+                        <select required name="tipo" id="tipo">
+                            <option value=""></option>
+                            <option value="Tipo: Bug">Bug</option>
+                            <option value="Tipo: Dragao">Dragao</option>
+                            <option value="Tipo: Fada">Fada</option>
+                            <option value="Tipo: Fogo">Fogo</option>
+                            <option value="Tipo: Ghost">Ghost</option>
+                            <option value="Tipo: Ground">Ground</option>
+                            <option value="Tipo: Normal">Normal</option>
+                            <option value="Tipo: Psíquico">Psíquico</option>
+                            <option value="Tipo: Steel">Steel</option>
+                            <option value="Tipo: Dark">Dark</option>
+                            <option value="Tipo: Eletric">Eletric</option>
+                            <option value="Tipo: Luta">Luta</option>
+                            <option value="Tipo: flying">Flying</option>
+                            <option value="Tipo: Planta">Planta</option>
+                            <option value="Tipo: Ice">Ice</option>
+                            <option value="Tipo: Poison">Poison</option>
+                            <option value="Tipo: Rock">Rock</option>
+                            <option value="Tipo: Agua">Agua</option>
+                        </select>
 
-                    <label for="imagem">Link da imagem:</label>
-                    <input required type="text" name="imagem" id="imagem">
+                        <label for="imagem">Link da imagem:</label>
+                        <input required type="text" name="imagem" id="imagem">
 
-                    <label for="descricao">Descrição:</label>
-                    <input required type="text" id="descricao" name="descricao">
+                        <label for="descricao">Descrição:</label>
+                        <input required type="text" id="descricao" name="descricao">
 
-                    <label for="altura">Altura(cm):</label>
-                    <input required type="number" id="altura" name="altura">
+                        <label for="altura">Altura(cm):</label>
+                        <input required type="number" id="altura" name="altura">
 
-                    <label for="peso">Peso(kg):</label>
-                    <input required type="text" id="peso" name="peso">
+                        <label for="peso">Peso(kg):</label>
+                        <input required type="text" id="peso" name="peso">
 
-                    <label for="categoria">Categoria:</label>
-                    <input required type="text" id="categoria" name="categoria">
+                        <label for="categoria">Categoria:</label>
+                        <input required type="text" id="categoria" name="categoria">
 
-                    <label for="habilidade">Habilidade:</label>
-                    <input required type="text" id="habilidade" name="habilidade">
+                        <label for="habilidade">Habilidade:</label>
+                        <input required type="text" id="habilidade" name="habilidade">
 
-                    <button id="btn" type="submit">Cadastrar</button>
-                </form>
-            </section>
+                        <button id="btn" type="submit">Cadastrar</button>
+                    </form>
+                </section>
+            </div>
         </div>
     </main>
 
