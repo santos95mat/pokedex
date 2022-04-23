@@ -51,7 +51,7 @@ a {
 }
 
 #header .desktop {
-    margin-right: 2vw
+    margin-right: 2vw;
 }
 
 #header .mobile {
@@ -107,7 +107,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 50vh;
+    width: 50%;
     min-width: 350px;
     gap: 1rem;
 }
