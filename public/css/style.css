@@ -168,10 +168,9 @@ main {
 
 #cards div.card {
     padding: 1rem;
-    width: 18vh;
-    min-width: 100px;
+    width: 10vw;
+    min-width: 120px;
     min-height: 140px;
-    height: 25vh;
     box-shadow: 5px 5px 5px 5px #00000020;
     cursor: pointer;
 }
