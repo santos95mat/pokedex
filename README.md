@@ -24,12 +24,12 @@
 
 ## Link for app
 
-<a href="https://blue-matheus-pokedex.herokuapp.com" target="blank">
+<a href="https://blue-matheus-pokedex.herokuapp.com" target="_blank">
     <img src="https://assets.pokemon.com/assets/cms2-pt-br/img/misc/gus/buttons/logo-pokemon-79x45.png"/>
 </a>
 
 ## Contact
 
-<a href="https://www.linkedin.com/in/msantos95/" target="blank">
+<a href="https://www.linkedin.com/in/msantos95/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
