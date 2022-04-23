@@ -111,12 +111,14 @@ app.post("/search", (req, res) => {
   pesquisa = req.body;
   let index = false;
 
-  for(let poke of pokedex) {
-    if(poke.nome.toLowerCase().includes(pesquisa.nome.toLowerCase())){
-      pesquisa = poke;
-      index = true;
+  if(pesquisa.nome !== ""){
+    for(let poke of pokedex) {
+      if(poke.nome.toLowerCase().includes(pesquisa.nome.toLowerCase())){
+        pesquisa = poke;
+        index = true;
+      }
     }
-  }
+  } 
 
   if (index == false) {
     pesquisa = "";
