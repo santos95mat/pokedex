@@ -265,6 +265,8 @@ app.post("/add", (req, res) => {
   }
 
   if(index === false) {
+    const nome = pokemon.nome[0].toUpperCase() + pokemon.nome.substr(1).toLowerCase();
+    pokemon.nome = nome;
     pokemon.id = pokedex.length + 1;
     pokedex.push(pokemon);
   }

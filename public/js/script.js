@@ -12,4 +12,4 @@ nav.addEventListener("click", function(){
         ul.style.display = "none";
         i = 0;
     }
-})
+});

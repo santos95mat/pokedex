@@ -41,37 +41,37 @@
     <main>
 
         <div class="detalhe">
-            <h2><%=pokemon.nome%> Nº<%=pokemon.id%></h2>
+            <h2><%= pokemon.nome %> Nº<%= pokemon.id %></h2>
         </div>
         
 
         <section id="detalhe">
             <article id="detalhe-img">
-                <img src="<%=pokemon.imagem%>" alt="">
+                <img src="<%= pokemon.imagem %>" alt="">
             </article>
 
             <article id="detalhe-txt">
-                <p><%=pokemon.descricao%></p>
+                <p><%= pokemon.descricao %></p>
 
                 <div id="status">
                     <div>
                         <h3>Altura</h3>
-                        <h4><%=pokemon.altura%>m</h4>
+                        <h4><%= pokemon.altura %>m</h4>
 
                         <h3>Peso</h3>
-                        <h4><%=pokemon.peso%>kg</h4>  
+                        <h4><%= pokemon.peso %>kg</h4>  
                     </div>
 
                     <div>
                         <h3>Categoria</h3>
-                        <h4><%=pokemon.categoria%></h4>
+                        <h4><%= pokemon.categoria %></h4>
 
                         <h3>Habilidade</h3>
-                        <h4><%=pokemon.habilidade%></h4>
+                        <h4><%= pokemon.habilidade %></h4>
                     </div>                   
                 </div>
 
-                <p><%=pokemon.tipo%></p>
+                <p><%= pokemon.tipo %></p>
 
             </article>
 
