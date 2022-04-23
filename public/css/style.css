@@ -96,6 +96,7 @@ main {
     text-align: center;
     width: 100%;
     min-height: 80vh;
+    height: 80vh;
 }
 
 #pokedados {
