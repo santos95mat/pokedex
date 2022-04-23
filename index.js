@@ -241,7 +241,7 @@ app.get("/", (req, res) => {
 
 app.get("/cadastro", (req, res) => {
   pesquisa = [];
-  res.render("cadastro");
+  res.render("cadastro", {pokedex});
 });
 
 app.get("/:nome", (req, res) => {
