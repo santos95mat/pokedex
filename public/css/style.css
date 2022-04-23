@@ -19,6 +19,7 @@ header {
     width: 100%;
     position: relative;
     min-height: 15vh;
+    height: 15vh;
 }
 
 a {
