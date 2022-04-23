@@ -1,4 +1,4 @@
-# Módulo 2 / Projeto 2 (Pokedex)
+# BlueM2P2 - Pokedex
 #### Inspired by the "Pokedex" from "Pokemon"
 #### ExpressJS application for data persistence.
 
@@ -21,6 +21,12 @@
     <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/>
     <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 </div>
+
+## Link for app
+
+<a href="https://blue-matheus-pokedex.herokuapp.com" target="blank">
+    <img src="https://assets.pokemon.com/assets/cms2-pt-br/img/misc/gus/buttons/logo-pokemon-79x45.png"/>
+</a>
 
 ## Contato
 
