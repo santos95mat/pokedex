@@ -258,10 +258,10 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro", {pokedex});
 });
 
-app.get("/:nome", (req, res) => {
+app.get("/detalhe/:id", (req, res) => {
   pesquisa = [];
-  const nome = req.params.nome;
-  const pokemon = pokedex.find(pokemon => pokemon.nome === nome);
+  const id = +req.params.id;
+  const pokemon = pokedex.find(pokemon => pokemon.id === id);
 
   res.render("detalhe", {pokemon});
 
