@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Pokedex</title>
     <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
+
+    <script>
+        const pdx = `<%- JSON.stringify(pokedex) %>`;        
+        const pokedex = JSON.parse(pdx);
+    </script>
 </head>
 <body>
     <header>
@@ -49,7 +54,7 @@
                 </section>
                 
                 <section id="cadastro">
-                    <form action="/add" method="post">
+                    <form class="formulario" action="/add" method="post">
 
                         <label for="nome">Nome:</label>
                         <input required maxlength="15" type="text" id="nome" name="nome">

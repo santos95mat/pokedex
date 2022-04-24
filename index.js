@@ -234,6 +234,8 @@ const pokedex = [
   },
 ]
 
+export default pokedex;
+
 class Pokemon {
   constructor(a, b, c , d, e, f, g, h){
     this.id = pokedex.length + 1,
