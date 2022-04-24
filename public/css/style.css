@@ -185,10 +185,11 @@ main {
     min-height: 140px;
     box-shadow: 5px 5px 5px 5px #00000020;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
 #cards div.card:hover {
-    background-color: rgb(228, 246, 252);
+    transform: scale(1.2);
 }
 
 #cards div.card img {
