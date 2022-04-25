@@ -288,8 +288,8 @@ app.post("/add", (req, res) => {
     pokemon.nome = nome;
     pokedex.push(pokemon);
   }
-  
-  res.redirect("/");
+
+  setTimeout(() => { res.redirect("/"); }, 5000);
 });
 
 app.post("/search", (req, res) => {

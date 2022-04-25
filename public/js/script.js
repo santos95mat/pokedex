@@ -45,12 +45,14 @@ class ValidaFormulario {
 
     pokemonValido() {
         const pokemon = this.formulario.querySelector("#nome");
-        const nome2 = pokemon.value.trim()
-        const text = pokemon.value + " ja cadastrado";
+        const imagem = this.formulario.querySelector("#imagem").value;
+        console.log(imagem);
+        const pokeNome = pokemon.value.trim();
+        const text = pokeNome + " ja cadastrado";
         let cadastrado = false;
 
         for(let nome of nomes) {
-            if(nome.toLowerCase() === nome2.toLowerCase()){
+            if(nome.toLowerCase() === pokeNome.toLowerCase()){
                 pokemon.value = "";
                 pokemon.placeholder = text;
                 pokemon.style.animation = "mv .3s linear 1 backwards";
@@ -62,6 +64,13 @@ class ValidaFormulario {
         }
 
         if(cadastrado === false) {
+            const absolut = document.querySelector("#absolute")
+            const h2 = document.querySelector("#h2");
+            const img = document.querySelector("#img")
+
+            absolut.style.display = "block";
+            h2.innerText = pokeNome + " cadastrado com sucesso";
+            img.src = imagem;
             return true;
         }
 

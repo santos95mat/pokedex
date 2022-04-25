@@ -6,27 +6,6 @@
     font-family: Roboto, Arial;
 }
 
-input[type='number'] {
-    -moz-appearance:textfield;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-input[type=number]::-webkit-inner-spin-button { 
-    all: unset; 
-    min-width: 21px;
-    min-height: 45px;
-    margin: 17px;
-    background-image: 
-    linear-gradient(to top, transparent 0px, transparent 16px, #fff 16px, #fff 26px, transparent 26px, transparent 35px, rgb(255, 93, 93) 35px,rgb(255, 93, 93) 36px,transparent 36px, transparent 40px),
-    linear-gradient(to right, transparent 0px, transparent 10px, rgb(255, 93, 93) 10px, rgb(255, 93, 93) 11px, transparent 11px, transparent 21px);
-    transform: rotate(90deg) scale(0.8, 0.9);
-    cursor:pointer;
-}
-
 header {
     width: 100%;
     position: relative;
@@ -218,12 +197,75 @@ main {
     width: 100%;
 }
 
+#absolute {
+    display: none;
+}
+
+.absolute {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+    opacity: .7
+}
+
+.absolute2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    top: 50%;
+    margin-top: -35vh;
+    left: 50%;
+    margin-left: -170px;
+    width: 340px;
+    height: 70vh;
+    background-color: white;
+    z-index: 11;
+    border-radius: 10px;
+}
+
+.absolute2 h2 {
+    margin-top: 1rem;
+}
+
+.absolute2 img {
+    width: 70%;
+}
+
+.absolute2 p, .absolute2 h2 {
+    width: 98%;
+}
+
+.absolute2 button {
+    width: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.absolute2 button:hover {
+    background-color: red;
+}
+
 .cadastro {
-    min-height: 500px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .cadastro h2 {
-    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -247,7 +289,6 @@ main {
     align-content: center;
     align-items: center;
     width: 50%;
-    min-height: 500px;
 }
 
 #cadastro form {
@@ -260,7 +301,7 @@ main {
 
 #cadastro form input {
     width: 100%;
-    height: 2rem;
+    height: 1.5rem;
     border: solid 1px rgb(255, 177, 177);
     font-size: 1rem;
     background-color: #fff;
@@ -274,7 +315,7 @@ main {
 
 #cadastro form select {
     width: 100%;
-    height: 2rem;
+    height: 1.5rem;
     border: solid 1px rgb(255, 177, 177);
     font-size: 1rem;
     background-color: #fff;
@@ -290,7 +331,7 @@ main {
     margin-top: .5rem;
     margin-bottom: .5rem;
     width: 100%;
-    height: 2rem;
+    height: 1.5rem;
     border: none;
     cursor: pointer;
     text-align: center;
