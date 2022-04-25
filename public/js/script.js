@@ -45,12 +45,12 @@ class ValidaFormulario {
 
     pokemonValido() {
         const pokemon = this.formulario.querySelector("#nome");
-        const nome = pokemon.value.trim()
+        const nome2 = pokemon.value.trim()
         const text = pokemon.value + " ja cadastrado";
         let cadastrado = false;
 
         for(let nome of nomes) {
-            if(nome.toLowerCase() === nome.toLowerCase()){
+            if(nome.toLowerCase() === nome2.toLowerCase()){
                 pokemon.value = "";
                 pokemon.placeholder = text;
                 pokemon.style.animation = "mv .3s linear 1 backwards";
