@@ -272,6 +272,8 @@ app.get("/detalhe/:id", (req, res) => {
 app.post("/add", (req, res) => {
   const {nome, tipo, imagem, descricao, altura, peso, categoria, habilidade} = req.body;
   const pokemon = new Pokemon(nome, tipo, imagem, descricao, altura, peso, categoria, habilidade);
+  const text = pokemon.nome.trim();
+  pokemon.nome = text;
   let index = false;
 
   for(let poke of pokedex){
@@ -282,11 +284,11 @@ app.post("/add", (req, res) => {
   }
 
   if(index === false) {
-    const nome = pokemon.nome[0].toUpperCase() + pokemon.nome.substr(1).toLowerCase();
+    const nome = pokemon.nome[0].toUpperCase() + pokemon.nome.substring(1).toLowerCase();
     pokemon.nome = nome;
     pokedex.push(pokemon);
   }
-
+  
   res.redirect("/");
 });
 
