@@ -45,7 +45,7 @@ class ValidaFormulario {
 
     pokemonValido() {
         const pokemon = this.formulario.querySelector("#nome");
-        const imagem = this.formulario.querySelector("#imagem").value;
+        const imagem = this.formulario.querySelector("#imagem").value.trim();
         console.log(imagem);
         const pokeNome = pokemon.value.trim();
         const text = pokeNome + " ja cadastrado";

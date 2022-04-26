@@ -273,7 +273,9 @@ app.post("/add", (req, res) => {
   const {nome, tipo, imagem, descricao, altura, peso, categoria, habilidade} = req.body;
   const pokemon = new Pokemon(nome, tipo, imagem, descricao, altura, peso, categoria, habilidade);
   const text = pokemon.nome.trim();
+  const img = pokemon.imagem.trim();
   pokemon.nome = text;
+  pokemon.imagem = img;
   let index = false;
 
   for(let poke of pokedex){
