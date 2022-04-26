@@ -93,13 +93,8 @@ a {
     width: 3rem;
 }
 
-#header div a {
-    text-decoration: none;
-}
-
 #header nav a {
     color: #fff;
-    text-decoration: none;
     font-size: 1.5rem;
     margin-left: 2rem;
 }
