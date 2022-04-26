@@ -12,6 +12,11 @@
         const pdx = `<%- JSON.stringify(pokedex) %>`;        
         const pokedex = JSON.parse(pdx);
     </script>
+    <style>
+        #header .desktop a:last-child {
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <%- include('./partials/popup.ejs') %>
