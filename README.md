@@ -25,7 +25,7 @@
 ## Link for app
 
 <a href="https://blue-matheus-pokedex.herokuapp.com" target="_blank">
-    <img src="https://assets.pokemon.com/assets/cms2-pt-br/img/misc/gus/buttons/logo-pokemon-79x45.png"/>
+    <img style="width:100px;" src="https://raw.githubusercontent.com/sleduardo20/pokedex/0671af442dff1d8f7141e49eb83b438885bbc9e9/public/img/logo.svg"/>
 </a>
 
 ## Contact
