@@ -395,11 +395,12 @@ a {
 
 #detalhe .detalhe-img {
     justify-content: flex-end;
+    min-width: 320px;
 }
 
 #detalhe .detalhe-img img {
     width: 70%;
-    min-width: 350px;
+    min-width: 320px;
     align-items: flex-end;
     background-color: rgb(224, 224, 224);
     border-radius: 10px;
@@ -412,7 +413,7 @@ a {
 
 #detalhe .detalhe-txt p {
     width: 75%;
-    min-width: 350px;
+    min-width: 320px;
     font-size: 1.2rem;
     margin-bottom: 1rem;
     text-align: justify;
@@ -428,7 +429,7 @@ a {
     background-color: rgb(119, 210, 252);
     padding: 1rem;
     border-radius: 10px;
-    min-width: 340px;
+    min-width: 310px;
 }
 
 #detalhe .detalhe-txt .status h3 {
@@ -510,7 +511,7 @@ a {
         width: 90%;
     }
 
-    #detalher .detalhe-img {
+    #detalhe .detalhe-img {
         justify-content: center;
     }
 
