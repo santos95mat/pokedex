@@ -14,56 +14,19 @@
     </script>
 </head>
 <body>
-    <div id="absolute">
-    <div class="absolute"></div>
-    <div class="absolute2">
-        <h2 id="h2"></h2>
-        <img id="img" src="" alt="">
-        <p>click em next para voltar a pokedex ou aguarde 5 segundos para ser rederecionado</p>
-        <button onclick="window.location.href='/'">Next</button>
-    </div>
-    </div>
-
-    <header>
-        <div id="header">
-            <div>
-                <a href="/">
-                    <h1>
-                        P<img src="/img/logo.png" alt="">kedex
-                    </h1>
-                </a>
-            </div>
-
-            <nav class="desktop">
-                <a href="/">Home</a>
-                <a href="/cadastro" style="color: black;">Cadastro</a>
-            </nav>
-
-            <nav class="mobile">
-                <img id="mobileImg" src="/img/menu.png" alt="">
-                <ul id="mobileUl">
-                    <a href="/">
-                        <li>Home</li>
-                    </a>
-                    <a href="/cadastro">
-                        <li>Cadastro</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <%- include('./partials/popup.ejs') %>
+	<%- include('./partials/header.ejs') %>
 
     <main>
-
-        <div class="cadastro">
+        <div id="container">
             <h2>Cadastro pokemon</h2>
 
-            <div id="main">
-                <section id="cadastroimg">
+            <div id="cadastro">
+                <section class="cadastroimg">
                     <img src="/img/pokedex.png" alt="">
                 </section>
                 
-                <section id="cadastro">
+                <section class="cadastro">
                     <form class="formulario" action="/add" method="post">
 
                         <label for="nome">Nome:</label>
@@ -117,9 +80,7 @@
         </div>
     </main>
 
-    <footer>
-        <a href="http://www.github.com/santos95mat" target="_blank">Powered By Matheus</a>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 
     <script src="/js/script.js"></script>
 </body>

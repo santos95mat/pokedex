@@ -9,34 +9,7 @@
     <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
 </head>
 <body>
-    <header>
-        <div id="header">
-            <div>
-                <a href="/">
-                    <h1>
-                        P<img src="/img/logo.png" alt="">kedex
-                    </h1>
-                </a>
-            </div>
-
-            <nav class="desktop">
-                <a href="/" style="color: black;">Home</a>
-                <a href="/cadastro">Cadastro</a>
-            </nav>
-
-            <nav class="mobile">
-                <img id="mobileImg" src="/img/menu.png" alt="">
-                <ul id="mobileUl">
-                    <a href="/">
-                        <li>Home</li>
-                    </a>
-                    <a href="/cadastro">
-                        <li>Cadastro</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <%- include('./partials/header.ejs') %>
     
     <main>
         
@@ -69,9 +42,7 @@
         </section>
     </main>
 
-    <footer>
-        <a href="http://www.github.com/santos95mat" target="_blank">Powered By Matheus</a>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 
     <script src="/js/script.js"></script>
 </body>

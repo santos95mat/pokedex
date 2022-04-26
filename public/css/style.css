@@ -13,10 +13,37 @@ header {
     min-height: 3.5rem;
 }
 
+main {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 8vh;
+    min-height: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-size: 1.5rem;
+    background-color: black;
+    color: #fff;
+}
+
 a {
     text-decoration: none;
     color: currentColor;
 }
+
+/* Aqui começa estilo do Header */
 
 #header {
     position: fixed;
@@ -81,17 +108,9 @@ a {
     color: rgb(0, 0, 0);
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    min-height: 80vh;
-}
+/* Aqui termina estilo do Header */
+
+/* Aqui começa estilo do index.ejs */
 
 #pokedados {
     display: flex;
@@ -188,20 +207,15 @@ main {
     text-align: left;
 }
 
-#main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    width: 100%;
-}
+/* Aqui termina estilo do index.ejs */
+
+/* Aqui começa estilo do cadastro.ejs */
 
 #absolute {
     display: none;
 }
 
-.absolute {
+#absolute .absolute {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -210,7 +224,7 @@ main {
     opacity: .7
 }
 
-.absolute2 {
+#absolute .absolute2 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -219,29 +233,30 @@ main {
     align-content: center;
     text-align: center;
     top: 50%;
-    margin-top: -35vh;
+    margin-top: -30vh;
     left: 50%;
     margin-left: -170px;
     width: 340px;
-    height: 70vh;
+    height: 60vh;
     background-color: white;
     z-index: 11;
     border-radius: 10px;
 }
 
-.absolute2 h2 {
+#absolute .absolute2 h2 {
     margin-top: 1rem;
-}
-
-.absolute2 img {
-    width: 70%;
-}
-
-.absolute2 p, .absolute2 h2 {
     width: 98%;
 }
 
-.absolute2 button {
+#absolute .absolute2 img {
+    width: 70%;
+}
+
+#absolute .absolute2 p {
+    width: 98%;
+}
+
+#absolute .absolute2 button {
     width: 100px;
     padding: 10px;
     font-size: 1rem;
@@ -252,11 +267,11 @@ main {
     cursor: pointer;
 }
 
-.absolute2 button:hover {
+#absolute .absolute2 button:hover {
     background-color: red;
 }
 
-.cadastro {
+#container {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -265,11 +280,20 @@ main {
     align-items: center;
 }
 
-.cadastro h2 {
+#container h2 {
     margin-bottom: 1rem;
 }
 
-#cadastroimg {
+#cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+#cadastro .cadastroimg {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -278,11 +302,11 @@ main {
     border-right: solid 3px #00000020;;
 }
 
-#cadastroimg img {
+#cadastro .cadastroimg img {
     width: 70%;
 }
 
-#cadastro {
+#cadastro .cadastro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -291,7 +315,7 @@ main {
     width: 50%;
 }
 
-#cadastro form {
+#cadastro .cadastro form {
     width: 70%;
     min-width: 300px;
     display: flex;
@@ -299,7 +323,7 @@ main {
     color: rgb(255, 93, 93);
 }
 
-#cadastro form input {
+#cadastro .cadastro form input {
     width: 100%;
     height: 1.5rem;
     border: solid 1px rgb(255, 177, 177);
@@ -313,7 +337,7 @@ main {
     color: rgb(255, 177, 177);
 }
 
-#cadastro form select {
+#cadastro .cadastro form select {
     width: 100%;
     height: 1.5rem;
     border: solid 1px rgb(255, 177, 177);
@@ -327,7 +351,7 @@ main {
     color: rgb(255, 177, 177);
 }
 
-#cadastro form button {
+#cadastro .cadastro form button {
     margin-top: .5rem;
     margin-bottom: .5rem;
     width: 100%;
@@ -341,8 +365,16 @@ main {
     background-color: black;
 }
 
-#cadastro form button:hover {
+#cadastro .cadastro form button:hover {
     background-color: red;
+}
+
+/* Aqui termina estilo do cadastro.ejs */
+
+/* Aqui começa estilo do detalhe.ejs */
+
+#detalheTitle h2 {
+    margin-top: 1rem;
 }
 
 #detalhe {
@@ -357,10 +389,6 @@ main {
     margin-bottom: 1rem;
 }
 
-.detalhe h2 {
-    margin-top: 1rem;
-}
-
 #detalhe article {
     display: flex;
     flex-wrap: wrap;
@@ -370,11 +398,11 @@ main {
     text-align: left;
 }
 
-#detalhe-img {
+#detalhe .detalhe-img {
     justify-content: flex-end;
 }
 
-#detalhe-img img {
+#detalhe .detalhe-img img {
     width: 70%;
     min-width: 350px;
     align-items: flex-end;
@@ -382,12 +410,12 @@ main {
     border-radius: 10px;
 }
 
-#detalhe-txt {
+#detalhe .detalhe-txt {
     justify-content: space-between;
     align-content: space-between;
 }
 
-#detalhe-txt p {
+#detalhe .detalhe-txt p {
     width: 75%;
     min-width: 350px;
     font-size: 1.2rem;
@@ -395,7 +423,7 @@ main {
     text-align: justify;
 }
 
-#detalhe-txt #status {
+#detalhe .detalhe-txt .status {
     width: 68%;
     display: flex;
     justify-content: flex-start;
@@ -408,32 +436,20 @@ main {
     min-width: 340px;
 }
 
-#detalhe-txt #status h3 {
+#detalhe .detalhe-txt .status h3 {
     color: white;
     font-size: 1rem;
     font-weight: normal;
 }
 
-#detalhe-txt #status h4 {
+#detalhe .detalhe-txt .status h4 {
     font-size: 1rem;
     font-weight: normal;
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
-footer {
-    background-color: black;
-    color: #fff;
-    height: 8vh;
-    min-height: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    font-size: 1.5rem;
-}
+/* Aqui termina estilo do detalhe.ejs */
 
 @media screen and (max-width: 920px) {
     #header .mobile {
@@ -487,7 +503,7 @@ footer {
         display: none;
     }
 
-    #cadastroimg {
+    #cadastro .cadastroimg {
         display: none;
     }
 
@@ -499,11 +515,11 @@ footer {
         width: 90%;
     }
 
-    #detalhe-img {
+    #detalher .detalhe-img {
         justify-content: center;
     }
 
-    #detalhe-txt {
+    #detalhe .detalhe-txt {
         justify-content: center;
         align-content: space-between;
         align-items: center;
@@ -511,12 +527,12 @@ footer {
         width: 90%;
     }
 
-    #detalhe-txt #status {
-        width: 90%;
+    #detalhe .detalhe-txt p {
+        margin-bottom: 0;
     }
 
-    #detalhe-txt p {
-        margin-bottom: 0;
+    #detalhe .detalhe-txt .status {
+        width: 90%;
     }
 }
 
