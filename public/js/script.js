@@ -69,6 +69,7 @@ class ValidaFormulario {
             const img = document.querySelector("#img")
 
             absolut.style.display = "block";
+            absolut.style.overflow = "hidden";
             h2.innerText = pokeNome + " cadastrado com sucesso";
             img.src = imagem;
             return true;
